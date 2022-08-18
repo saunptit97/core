@@ -12,7 +12,9 @@ class ButtonWidget extends StatelessWidget {
     this.titleWidget,
     this.onTap,
     this.borderRadius,
-    this.btnBorder,
+    this.padding = 8,
+    this.prefixIcon,
+    this.suffixIcon,
   }) : super(key: key);
 
   final String title;
@@ -31,34 +33,49 @@ class ButtonWidget extends StatelessWidget {
 
   final BorderRadius? borderRadius;
 
-  final Color? btnBorder;
+  final double padding;
+
+  final Widget? suffixIcon;
+
+  final Widget? prefixIcon;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: btnColor,
         borderRadius: borderRadius ?? BorderRadius.circular(4),
-        border: Border.all(color: btnBorder ?? btnColor!),
+        border: Border.all(
+          width: 1,
+          color: const Color(0xFFF05323),
+        ),
       ),
       height: height,
       width: width,
       child: GestureDetector(
-        onTap: onTap,
         behavior: HitTestBehavior.translucent,
+        onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Center(
-            child: titleWidget ??
-                FixedText(
-                  title,
-                  maxLines: 2,
-                  textAlign: TextAlign.center,
-                  style: titleStyle ??
-                      const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                      ),
-                ),
+          padding: EdgeInsets.all(padding),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              prefixIcon ?? const SizedBox(),
+              Center(
+                child: titleWidget ??
+                    FixedText(
+                      title,
+                      maxLines: 2,
+                      textAlign: TextAlign.center,
+                      style: titleStyle ??
+                          const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                          ),
+                    ),
+              ),
+              suffixIcon ?? const SizedBox(),
+            ],
           ),
         ),
       ),
