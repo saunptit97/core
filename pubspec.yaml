@@ -35,8 +35,7 @@ dependencies:
     git:
       url: https://github.com/saunptit97/base_getx
   core:
-    git:
-      url: https://github.com/saunptit97/core
+    path: modules/core
 
 
 dev_dependencies:
