@@ -61,7 +61,7 @@ class HomeScreen extends BaseView<HomeControler> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 Text(
                   "Tìm kiếm gần nhất".toUpperCase(),
@@ -70,7 +70,7 @@ class HomeScreen extends BaseView<HomeControler> {
                   height: 10,
                 ),
                 SizedBox(
-                  height: 200,
+                  height: 145,
                   width: Get.width,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
