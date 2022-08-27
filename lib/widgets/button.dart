@@ -47,7 +47,7 @@ class ButtonWidget extends StatelessWidget {
         borderRadius: borderRadius ?? BorderRadius.circular(4),
         border: Border.all(
           width: 1,
-          color: const Color(0xFFF05323),
+          color: btnColor ?? Colors.transparent,
         ),
       ),
       height: height,
