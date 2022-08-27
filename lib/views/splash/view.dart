@@ -30,8 +30,23 @@ class SplashScreen extends BaseView<SplashController> {
             left: 20,
             right: 20,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const Text(
+                  "Khám phá\nđịa điểm mới",
+                  style: TextStyle(
+                    fontSize: 26,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  "Trải nghiệm những địa điểm du lịch thú vị, đem lại trải nghiệm tuyệt với",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 20),
                 ButtonWidget(
                   title: 'Đăng nhập',
                   onTap: controller.navigateSignIn,

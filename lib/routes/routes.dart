@@ -1,5 +1,7 @@
 import 'package:base_getx/base.dart';
 import 'package:travel/views/home/index.dart';
+import 'package:travel/views/home_navigate/binding.dart';
+import 'package:travel/views/home_navigate/view.dart';
 
 import '../views/splash/index.dart';
 
@@ -20,8 +22,8 @@ class Pages {
       ),
       GetPage(
         name: RouteNames.home,
-        page: () => const HomeScreen(),
-        binding: HomeBinding(),
+        page: () => const HomeNavigateScreen(),
+        binding: HomeNavigateBinding(),
       ),
     ];
   }

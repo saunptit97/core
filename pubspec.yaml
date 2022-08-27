@@ -36,6 +36,13 @@ dependencies:
       url: https://github.com/saunptit97/base_getx
   core:
     path: modules/core
+  # core:
+  #   git:
+      # url: https://github.com/saunptit97/core
+  flutter_rating_bar: ^4.0.1
+  persistent_bottom_nav_bar: ^4.0.2
+
+      
 
 
 dev_dependencies:
