@@ -10,23 +10,14 @@ class SignUpScreen extends BaseView<SignUpController> {
   @override
   Widget vBuilder(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
+      backgroundColor: Colors.white,
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.arrow_back_ios_new_outlined,
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Text("Sign Up"),
-            const Spacer(),
-            const Text("SIGN UP WITH"),
+            const Text("Đăng ký", style: TextStyle(fontSize: 30)),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30),
               child: Row(
@@ -51,7 +42,36 @@ class SignUpScreen extends BaseView<SignUpController> {
                 ],
               ),
             ),
-            const Text("OR"),
+            const Center(
+              child: Text(
+                "hoặc đăng ký bằng email",
+              ),
+            ),
+            TextFieldWidget(
+              controller: controller.firstNameController,
+              paddingLeft: 0,
+              paddingRight: 0,
+              hintText: 'Tên của bạn',
+            ),
+            TextFieldWidget(
+              controller: controller.lastNameController,
+              paddingLeft: 0,
+              paddingRight: 0,
+              hintText: 'Tên đệm',
+            ),
+            TextFieldWidget(
+              controller: controller.emailController,
+              paddingLeft: 0,
+              paddingRight: 0,
+              hintText: 'Địa chỉ email',
+            ),
+            TextFieldWidget(
+              controller: controller.passwordController,
+              paddingLeft: 0,
+              paddingRight: 0,
+              hintText: 'Mật khẩu',
+              isPassword: true,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30),
               child: ButtonWidget(

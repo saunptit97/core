@@ -6,5 +6,7 @@ class SplashController extends BaseController {
     Get.toNamed(RouteNames.home);
   }
 
-  navigateSignUp() {}
+  navigateSignUp() {
+    Get.toNamed(RouteNames.signUp);
+  }
 }

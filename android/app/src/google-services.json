@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1054469526613",
+    "project_id": "travel-f0a68",
+    "storage_bucket": "travel-f0a68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054469526613:android:5dcaf3d4d77a9c890cf0dc",
+        "android_client_info": {
+          "package_name": "com.angeltea.travel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054469526613-unl3ef41a3i9aj6crn1r0sd1reng238m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBR0J8HW186bPvyTKbRrmJWosZCGGrKGck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054469526613-unl3ef41a3i9aj6crn1r0sd1reng238m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1054469526613-saa66eojcsj71oplgl8rfikgrjrid83j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.angeltea.travel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,7 +8,7 @@
 PRODUCT_NAME = travel
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.travel
+PRODUCT_BUNDLE_IDENTIFIER = com.angeltea.travel
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2022 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2022 com.angeltea. All rights reserved.
