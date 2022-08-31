@@ -3,7 +3,7 @@ import 'package:travel/routes/routes.dart';
 
 class SplashController extends BaseController {
   navigateSignIn() {
-    Get.toNamed(RouteNames.home);
+    Get.toNamed(RouteNames.signIn);
   }
 
   navigateSignUp() {

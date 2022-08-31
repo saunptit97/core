@@ -2,10 +2,10 @@ import 'package:base_getx/views/base_view.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:travel/utils/colors.dart';
-import 'package:travel/views/sign_up/controller.dart';
+import 'package:travel/views/sign_in/controller.dart';
 
-class SignUpScreen extends BaseView<SignUpController> {
-  const SignUpScreen({Key? key}) : super(key: key);
+class SignInScreen extends BaseView<SignInController> {
+  const SignInScreen({Key? key}) : super(key: key);
 
   @override
   Widget vBuilder(BuildContext context) {
@@ -20,7 +20,7 @@ class SignUpScreen extends BaseView<SignUpController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Đăng ký", style: TextStyle(fontSize: 30)),
+                const Text("Đăng nhập", style: TextStyle(fontSize: 30)),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 30),
                   child: Row(
@@ -47,26 +47,8 @@ class SignUpScreen extends BaseView<SignUpController> {
                 ),
                 const Center(
                   child: Text(
-                    "hoặc đăng ký bằng email",
+                    "hoặc đăng nhập bằng email",
                   ),
-                ),
-                TextFieldWidget(
-                  controller: controller.firstNameController,
-                  paddingLeft: 0,
-                  paddingRight: 0,
-                  hintText: 'Tên của bạn',
-                  validator: (value) {
-                    return controller.validateFirstName(value!);
-                  },
-                ),
-                TextFieldWidget(
-                  controller: controller.lastNameController,
-                  paddingLeft: 0,
-                  paddingRight: 0,
-                  hintText: 'Tên đệm',
-                  validator: (value) {
-                    return controller.validateLastName(value!);
-                  },
                 ),
                 TextFieldWidget(
                   controller: controller.emailController,
@@ -100,7 +82,7 @@ class SignUpScreen extends BaseView<SignUpController> {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 30),
                   child: ButtonWidget(
-                    title: 'Đăng ký',
+                    title: 'Đăng nhập',
                     btnColor: ColorUtils.primaryColor,
                     onTap: controller.signUp,
                     width: MediaQuery.of(context).size.width - 40,
@@ -110,10 +92,10 @@ class SignUpScreen extends BaseView<SignUpController> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Bạn đã có tài khoản?"),
+                    const Text("Bạn chưa có tài khoản?"),
                     TextButton(
                       onPressed: () => print("123"),
-                      child: Text("Đăng nhập"),
+                      child: Text("Đăng ký"),
                     )
                   ],
                 ),

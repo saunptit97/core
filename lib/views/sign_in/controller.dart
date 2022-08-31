@@ -1,28 +1,14 @@
-import 'package:base_getx/controller/base_controller.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:base_getx/base.dart';
+import 'package:flutter/material.dart';
+import 'package:travel/routes/routes.dart';
 
-class SignUpController extends BaseController {
+class SignInController extends BaseController {
   var formKey = GlobalKey<FormState>();
   TextEditingController firstNameController = TextEditingController();
   TextEditingController lastNameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool isShowPass = false;
-
-  String? validateFirstName(String value) {
-    if (GetUtils.isNullOrBlank(value)!) {
-      return 'Vui lòng nhập tên của bạn';
-    }
-    return null;
-  }
-
-  String? validateLastName(String value) {
-    if (GetUtils.isNullOrBlank(value)!) {
-      return 'Vui lòng nhập tên đệm của bạn';
-    }
-    return null;
-  }
-
   String? validateEmail(String value) {
     if (GetUtils.isNullOrBlank(value)!) {
       return 'Vui lòng nhập email của bạn';
@@ -41,7 +27,9 @@ class SignUpController extends BaseController {
   }
 
   signUp() async {
-    if (formKey.currentState!.validate()) {}
+    if (formKey.currentState!.validate()) {
+      Get.offAllNamed(RouteNames.home);
+    }
   }
 
   changeShowPass() {
